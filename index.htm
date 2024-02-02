@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/icons/all.min.css">
+    <link rel="stylesheet" href="./styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/fonts/Vazirmatn-font-face.css">
+    <title>Front-End TEST</title>
+</head>
+
+<body>
+    <!-- Login -->
+    <section id="login" class="w-100 vh-100 position-fixed top-0 start-0 bg-light d-block">
+        <div class="w-50 p-5 bg-white rounded-3 shadow position-absolute top-50 start-50 translate-middle">
+            <div class="row mb-3">
+                <div class="h4">برای ورود به صفحه آزمون وارد شوید</div>
+            </div>
+            <div class="row mb-3">
+                <input id="loginInput" type="text" class="form-control" placeholder="نام و نام خانوادگی">
+            </div>
+            <div class="row">
+                <button id="goBtn" class="btn btn-primary">بزن بریم</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Questions -->
+    <section id="questionsSection" class="w-100 vh-100 position-fixed top-0 start-0 bg-light d-none">
+        <div class="container my-4 h4 text-primary">
+            <i class="fa fa-user"></i>
+            <span id="yourName" class="me-2">نام شما</span>
+        </div>
+
+        <div class="w-75 bg-white p-4 position-absolute top-50 start-50 translate-middle rounded-3 shadow">
+            <div id="question" class="mb-4 text-center">
+                <span class="fs-5">کدام گزینه کدام است؟</span>
+            </div>
+
+            <div id="answer" class="mb-4">
+                <div class="d-flex flex-column justify-content-center form-check">
+                    <button class="btn btn-outline-secondary w-100 mb-1" value=""></button>
+                    <button class="btn btn-outline-secondary w-100 mb-1" value=""></button>
+                    <button class="btn btn-outline-secondary w-100 mb-1" value=""></button>
+                    <button class="btn btn-outline-secondary w-100" value=""></button>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="nextBtn" class="btn btn-primary">بعدی</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- end -->
+    <section id="endSection" class="w-100 vh-100 position-fixed top-0 start-0 bg-light d-none">
+        <div class="container">
+            <div class="row my-4">
+                <div class="col text-center">
+                    <span id="yourAvg" class="h4">نمره شما:</span>
+                </div>
+                <div class="col text-center">
+                    <span id="anstConter" class="h4">تعداد جواب های درست:</span>
+                </div>
+            </div>
+
+            <div class="w-75 mx-auto my-4">
+                <div class="h6">وضعیت پیشرفت شما</div>
+                <div class="progress" role="progressbar" aria-valuemax="100">
+                    <div id="progress" class="progress-bar" style="width: 25%"></div>
+                </div>
+            </div>
+
+            <div class="w-75 mx-auto">
+                <ul class="list-group">
+                    <li class="list-group-item list-group-item-secondary">1-زبان نشانه گذاری برای طراحی صفحات وب</li>
+                    <li class="list-group-item list-group-item-secondary">2-cascading style sheets</li>
+                    <li class="list-group-item list-group-item-secondary">3-ساخت برنامه های تعاملی مرورگر</li>
+                    <li class="list-group-item list-group-item-secondary">4-getElementsByClassNam$el</li>
+                    <li class="list-group-item list-group-item-secondary">5-همه موارد</li>
+                    <li class="list-group-item list-group-item-secondary">6-زمانی که روی input وارد میشویم</li>
+                    <li class="list-group-item list-group-item-secondary">7-زمانی که از المان مورد نظر خارج شویم</li>
+                    <li class="list-group-item list-group-item-secondary">8-نوع نمایش المان ها</li>
+                    <li class="list-group-item list-group-item-secondary">9-موقعیت المان ها</li>
+                    <li class="list-group-item list-group-item-secondary">10-برای رنگ متن ها</li>
+                </ul>
+            </div>
+
+            <div class="my-2 text-center">
+                <button id="reset" class="btn btn-primary">شروع دوباره</button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./scripts/bootstrap.bundle.min.js"></script>
+    <script defer src="./scripts/questions.js"></script>
+    <script src="./scripts/app.js"></script>
+</body>
+
+</html>
